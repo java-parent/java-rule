@@ -1,4 +1,4 @@
-package com.loinx.java.rule;
+package com.loinx.java.validator;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,6 +12,7 @@ public class AbstractValidatorTest {
 	public void shouldImplRuleSuccessfully() {
 		ValidatorImpl impl = new ValidatorImpl();
 		Assert.assertNotNull(impl);
+		Assert.assertEquals(impl.getName(), ValidatorImpl.class.getSimpleName());
 	}
 
 	class ValidatorImpl extends AbstractValidator {
